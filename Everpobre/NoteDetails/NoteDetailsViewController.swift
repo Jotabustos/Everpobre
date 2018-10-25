@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 // MARK:- NoteDetailsViewControllerProtocol
 
@@ -31,8 +32,12 @@ class NoteDetailsViewController: UIViewController {
 	@IBOutlet weak var creationDateLabel: UILabel!
 	@IBOutlet weak var lastSeenDateLabel: UILabel!
 	@IBOutlet weak var descriptionTextView: UITextView!
-
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    
 	// MARK: Parameters
+    
+    let locationManager = CLLocationManager()
 
 //	let note: Note
 	let managedContext: NSManagedObjectContext
@@ -56,6 +61,9 @@ class NoteDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() // Modificar infoplist !!!!!!!!!!!
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
 		configure()
     }
 
@@ -118,7 +126,14 @@ class NoteDetailsViewController: UIViewController {
 			let modifiedNote = addProperties(to: note)
 			modifiedNote.creationDate = NSDate()
 			modifiedNote.notebook = notebook
-
+            
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.requestLocation()
+                modifiedNote.location?.latitude = locationManager.location?.coordinate.latitude ?? 0.0
+                modifiedNote.location?.longitude = locationManager.location?.coordinate.longitude ?? 0.0
+            }
+            
+            
 			if let notes = notebook.notes?.mutableCopy() as? NSMutableOrderedSet {
 				notes.add(note)
 				notebook.notes = notes
@@ -228,3 +243,17 @@ private extension NoteDetailsViewController.Kind {
 }
 
 
+
+
+extension NoteDetailsViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            latitudeLabel.text = "\(location.coordinate.latitude)"
+            longitudeLabel.text = "\(location.coordinate.longitude)"
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("No pude conseguir la ubicacion del usuario: \(error.localizedDescription)")
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  Note+CoreDataClass.swift
+//  Location+CoreDataClass.swift
 //  Everpobre
 //
 //  Created by Jose Julián Bustos Díaz on 25/10/18.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Note)
-public class Note: NSManagedObject {
+@objc(Location)
+public class Location: NSManagedObject {
 
 }

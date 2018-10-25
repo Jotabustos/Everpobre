@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8431B5C22181BE5600CBD78C /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5BE2181BE5600CBD78C /* Location+CoreDataClass.swift */; };
+		8431B5C32181BE5600CBD78C /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5BF2181BE5600CBD78C /* Location+CoreDataProperties.swift */; };
+		8431B5C82181C01B00CBD78C /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5C62181C01B00CBD78C /* Note+CoreDataClass.swift */; };
+		8431B5C92181C01B00CBD78C /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5C72181C01B00CBD78C /* Note+CoreDataProperties.swift */; };
 		A14D6E7B21753B55007EEE1F /* UIImage+ReSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */; };
 		A14D6E7C21753B55007EEE1F /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */; };
 		A14D6E7D21753B55007EEE1F /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7A21753B55007EEE1F /* UIImage+RoundCorner.swift */; };
@@ -15,8 +19,6 @@
 		A1678C77216D3847006D961B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1678C76216D3847006D961B /* CoreDataStack.swift */; };
 		A1678C9B216D3CF1006D961B /* Everpobre.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1678C99216D3CF1006D961B /* Everpobre.xcdatamodeld */; };
 		A1678CB0216D45A7006D961B /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1678CAC216D45A7006D961B /* Notebook+CoreDataProperties.swift */; };
-		A1678CB1216D45A7006D961B /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1678CAD216D45A7006D961B /* Note+CoreDataClass.swift */; };
-		A1678CB2216D45A7006D961B /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1678CAE216D45A7006D961B /* Note+CoreDataProperties.swift */; };
 		A1678CB3216D45A7006D961B /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1678CAF216D45A7006D961B /* Notebook+CoreDataClass.swift */; };
 		A1C37797216BEF2F00F1DB4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C37796216BEF2F00F1DB4B /* AppDelegate.swift */; };
 		A1C3779C216BEF2F00F1DB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C3779A216BEF2F00F1DB4B /* Main.storyboard */; };
@@ -36,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8431B5B72181BD0600CBD78C /* Everpobre v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Everpobre v3.xcdatamodel"; sourceTree = "<group>"; };
+		8431B5BE2181BE5600CBD78C /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8431B5BF2181BE5600CBD78C /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8431B5C62181C01B00CBD78C /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8431B5C72181C01B00CBD78C /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A14D6E6D21751AE0007EEE1F /* Everpobre v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Everpobre v2.xcdatamodel"; sourceTree = "<group>"; };
 		A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ReSize.swift"; sourceTree = "<group>"; };
 		A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
@@ -45,8 +52,6 @@
 		A1678C76216D3847006D961B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A1678C9A216D3CF1006D961B /* Everpobre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Everpobre.xcdatamodel; sourceTree = "<group>"; };
 		A1678CAC216D45A7006D961B /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A1678CAD216D45A7006D961B /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A1678CAE216D45A7006D961B /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A1678CAF216D45A7006D961B /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A1C37793216BEF2F00F1DB4B /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C37796216BEF2F00F1DB4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,10 +142,12 @@
 		A1C377AD216BFC6C00F1DB4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A1678CAD216D45A7006D961B /* Note+CoreDataClass.swift */,
-				A1678CAE216D45A7006D961B /* Note+CoreDataProperties.swift */,
+				8431B5C62181C01B00CBD78C /* Note+CoreDataClass.swift */,
+				8431B5C72181C01B00CBD78C /* Note+CoreDataProperties.swift */,
 				A1678CAF216D45A7006D961B /* Notebook+CoreDataClass.swift */,
 				A1678CAC216D45A7006D961B /* Notebook+CoreDataProperties.swift */,
+				8431B5BE2181BE5600CBD78C /* Location+CoreDataClass.swift */,
+				8431B5BF2181BE5600CBD78C /* Location+CoreDataProperties.swift */,
 				A1C377AE216BFC7E00F1DB4B /* deprecated_Notebook.swift */,
 				A1C377B0216C02B300F1DB4B /* deprecated_Note.swift */,
 			);
@@ -242,24 +249,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8431B5C22181BE5600CBD78C /* Location+CoreDataClass.swift in Sources */,
 				A14D6E7F21754539007EEE1F /* Animator.swift in Sources */,
+				8431B5C32181BE5600CBD78C /* Location+CoreDataProperties.swift in Sources */,
 				A1C55826216FFE57008C8562 /* NewNotesListViewController.swift in Sources */,
 				A14D6E7B21753B55007EEE1F /* UIImage+ReSize.swift in Sources */,
 				A1C377B1216C02B300F1DB4B /* deprecated_Note.swift in Sources */,
 				A1C377AA216BF1D900F1DB4B /* NotebookListViewController.swift in Sources */,
 				A1678CB0216D45A7006D961B /* Notebook+CoreDataProperties.swift in Sources */,
-				A1678CB2216D45A7006D961B /* Note+CoreDataProperties.swift in Sources */,
 				A1678CB3216D45A7006D961B /* Notebook+CoreDataClass.swift in Sources */,
 				A1678C9B216D3CF1006D961B /* Everpobre.xcdatamodeld in Sources */,
+				8431B5C82181C01B00CBD78C /* Note+CoreDataClass.swift in Sources */,
 				A1C37797216BEF2F00F1DB4B /* AppDelegate.swift in Sources */,
 				A1C5582A21700191008C8562 /* NotesListCollectionViewCell.swift in Sources */,
 				A14D6E7C21753B55007EEE1F /* UIImage+Alpha.swift in Sources */,
 				A1678C77216D3847006D961B /* CoreDataStack.swift in Sources */,
 				A1C377AF216BFC7E00F1DB4B /* deprecated_Notebook.swift in Sources */,
+				8431B5C92181C01B00CBD78C /* Note+CoreDataProperties.swift in Sources */,
 				A14D6E7D21753B55007EEE1F /* UIImage+RoundCorner.swift in Sources */,
 				A1C377B4216C039800F1DB4B /* NotesListViewController.swift in Sources */,
 				A1678C75216D2FAD006D961B /* Date+Utils.swift in Sources */,
-				A1678CB1216D45A7006D961B /* Note+CoreDataClass.swift in Sources */,
 				A1C377B8216C0D8C00F1DB4B /* NoteDetailsViewController.swift in Sources */,
 				A1C377AC216BFB0100F1DB4B /* NotebookListCell.swift in Sources */,
 			);
@@ -466,10 +475,11 @@
 		A1678C99216D3CF1006D961B /* Everpobre.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8431B5B72181BD0600CBD78C /* Everpobre v3.xcdatamodel */,
 				A14D6E6D21751AE0007EEE1F /* Everpobre v2.xcdatamodel */,
 				A1678C9A216D3CF1006D961B /* Everpobre.xcdatamodel */,
 			);
-			currentVersion = A14D6E6D21751AE0007EEE1F /* Everpobre v2.xcdatamodel */;
+			currentVersion = 8431B5B72181BD0600CBD78C /* Everpobre v3.xcdatamodel */;
 			path = Everpobre.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
