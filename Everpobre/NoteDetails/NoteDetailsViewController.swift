@@ -62,7 +62,7 @@ class NoteDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization() // Modificar infoplist !!!!!!!!!!!
+        locationManager.requestWhenInUseAuthorization() // Modificar infoplist !!!!!!!!!!! Done
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
 		configure()
     }
@@ -91,6 +91,8 @@ class NoteDetailsViewController: UIViewController {
 		creationDateLabel.text = "Creado: \((kind.note?.creationDate as Date?)?.customStringLabel() ?? "ND")"
 		lastSeenDateLabel.text = "Visto: \((kind.note?.lastSeenDate as Date?)?.customStringLabel() ?? "ND")"
 		descriptionTextView.text = kind.note?.text ?? "Ingrese texto..."
+        latitudeLabel.text = "\((kind.note?.location?.latitude) ?? 0.0)"
+        longitudeLabel.text = "\((kind.note?.location?.longitude) ?? 0.0)"
 
 		guard let data = kind.note?.image as Data? else {
 			imageView.image = #imageLiteral(resourceName: "120x180.png")
@@ -105,6 +107,7 @@ class NoteDetailsViewController: UIViewController {
 		func addProperties(to note: Note) -> Note {
 			note.title = titleTextField.text
 			note.text = descriptionTextView.text
+
 
 			let imageData: NSData?
 			if let image = imageView.image,
@@ -129,11 +132,16 @@ class NoteDetailsViewController: UIViewController {
             
             if CLLocationManager.locationServicesEnabled() {
                 locationManager.requestLocation()
-                modifiedNote.location?.latitude = locationManager.location?.coordinate.latitude ?? 0.0
-                modifiedNote.location?.longitude = locationManager.location?.coordinate.longitude ?? 0.0
+                let latitude = locationManager.location?.coordinate.latitude ?? 0.0
+                let longitude = locationManager.location?.coordinate.longitude ?? 0.0
+                
+                let location = Location(context: managedContext)
+                location.latitude = latitude
+                location.longitude = longitude
+                
+                modifiedNote.location = location
+                
             }
-            
-            
 			if let notes = notebook.notes?.mutableCopy() as? NSMutableOrderedSet {
 				notes.add(note)
 				notebook.notes = notes

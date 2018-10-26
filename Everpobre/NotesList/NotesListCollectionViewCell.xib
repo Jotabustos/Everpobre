@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gm-IN-Zhh">
-                        <rect key="frame" x="33.5" y="64.5" width="33.5" height="21"/>
+                        <rect key="frame" x="33" y="20" width="34" height="110"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,9 +34,10 @@
             </view>
             <constraints>
                 <constraint firstItem="US5-zm-ux3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FTy-1J-dIM"/>
-                <constraint firstItem="3Gm-IN-Zhh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="SZh-Rh-vdP"/>
+                <constraint firstItem="3Gm-IN-Zhh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="PaX-Tm-l4X"/>
                 <constraint firstAttribute="bottom" secondItem="US5-zm-ux3" secondAttribute="bottom" constant="20" id="Sfq-Iy-OZO"/>
-                <constraint firstItem="3Gm-IN-Zhh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="iKL-MG-cjY"/>
+                <constraint firstItem="3Gm-IN-Zhh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Y6t-sq-2f6"/>
+                <constraint firstItem="3Gm-IN-Zhh" firstAttribute="baseline" secondItem="US5-zm-ux3" secondAttribute="baseline" id="fbB-tY-rcn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="127" height="183"/>
