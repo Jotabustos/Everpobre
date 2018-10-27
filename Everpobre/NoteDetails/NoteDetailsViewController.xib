@@ -18,7 +18,7 @@
                 <outlet property="lastSeenDateLabel" destination="ej2-Ad-sCO" id="cE1-3X-gqN"/>
                 <outlet property="latitudeLabel" destination="uah-Me-mQE" id="6qP-yb-Gkr"/>
                 <outlet property="longitudeLabel" destination="1HW-My-5Wj" id="yvp-4N-fjP"/>
-                <outlet property="tagsLabel" destination="SBt-kV-98a" id="OEE-a2-c8B"/>
+                <outlet property="tagsTextField" destination="3xG-rh-C03" id="1YA-k8-3dd"/>
                 <outlet property="titleTextField" destination="JXU-i6-jAp" id="6Lf-lh-DhB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -91,12 +91,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-kV-98a">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xG-rh-C03">
                                                     <rect key="frame" x="49" y="0.0" width="166" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </stackView>
                                     </subviews>

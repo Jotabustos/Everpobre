@@ -12,6 +12,9 @@ class NotesListCollectionViewCell: UICollectionViewCell {
 
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var creationDateLabel: UILabel!
+    
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
 
 	var item: Note!
 
@@ -23,5 +26,7 @@ class NotesListCollectionViewCell: UICollectionViewCell {
 		backgroundColor = .white
 		titleLabel.text = item.title
 		creationDateLabel.text = (item.creationDate as Date?)?.customStringLabel()
+        latitudeLabel.text = "\((item.location?.latitude) ?? 0.0)"
+        longitudeLabel.text = "\((item.location?.longitude) ?? 0.0)"
 	}
 }
