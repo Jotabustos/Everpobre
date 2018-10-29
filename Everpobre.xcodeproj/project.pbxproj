@@ -14,6 +14,7 @@
 		84DE81A2218691C0005523CB /* NoteDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DE81A1218691C0005523CB /* NoteDetailsViewController.xib */; };
 		84DE81A621869D5B005523CB /* MapNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE81A421869D5B005523CB /* MapNoteViewController.swift */; };
 		84DE81A721869D5B005523CB /* MapNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DE81A521869D5B005523CB /* MapNoteViewController.xib */; };
+		84FCCE72218771AA00B1472E /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCCE71218771AA00B1472E /* PointOfInterest.swift */; };
 		A14D6E7B21753B55007EEE1F /* UIImage+ReSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */; };
 		A14D6E7C21753B55007EEE1F /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */; };
 		A14D6E7D21753B55007EEE1F /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7A21753B55007EEE1F /* UIImage+RoundCorner.swift */; };
@@ -48,6 +49,7 @@
 		84DE81A1218691C0005523CB /* NoteDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteDetailsViewController.xib; sourceTree = "<group>"; };
 		84DE81A421869D5B005523CB /* MapNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNoteViewController.swift; sourceTree = "<group>"; };
 		84DE81A521869D5B005523CB /* MapNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapNoteViewController.xib; sourceTree = "<group>"; };
+		84FCCE71218771AA00B1472E /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
 		A14D6E6D21751AE0007EEE1F /* Everpobre v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Everpobre v2.xcdatamodel"; sourceTree = "<group>"; };
 		A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ReSize.swift"; sourceTree = "<group>"; };
 		A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				84DE81A421869D5B005523CB /* MapNoteViewController.swift */,
 				84DE81A521869D5B005523CB /* MapNoteViewController.xib */,
+				84FCCE71218771AA00B1472E /* PointOfInterest.swift */,
 			);
 			path = MapNote;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				A1678C9B216D3CF1006D961B /* Everpobre.xcdatamodeld in Sources */,
 				8431B5C82181C01B00CBD78C /* Note+CoreDataClass.swift in Sources */,
 				A1C37797216BEF2F00F1DB4B /* AppDelegate.swift in Sources */,
+				84FCCE72218771AA00B1472E /* PointOfInterest.swift in Sources */,
 				A1C5582A21700191008C8562 /* NotesListCollectionViewCell.swift in Sources */,
 				A14D6E7C21753B55007EEE1F /* UIImage+Alpha.swift in Sources */,
 				A1678C77216D3847006D961B /* CoreDataStack.swift in Sources */,
