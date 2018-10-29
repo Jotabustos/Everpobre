@@ -72,6 +72,8 @@ class NewNotesListViewController: UIViewController {
         super.viewWillAppear(animated)
         segmentedControl.selectedSegmentIndex = 0
     }
+    
+    // MARK: - Segmented Control
 
     @IBAction func segmentedControlTap(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
@@ -83,8 +85,9 @@ class NewNotesListViewController: UIViewController {
             print("Map")
             let mapViewController = MapNoteViewController(notebook: notebook, coredataStack: coreDataStack)
            
-            show(mapViewController, sender: nil)
-            //navigationController?.pushViewController(mapViewController, animated: true)
+            //show(mapViewController, sender: nil)
+            //self.present(mapViewController, animated: true)
+            navigationController?.pushViewController(mapViewController, animated: true)
             
         default:
             break

@@ -38,6 +38,7 @@ class MapNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Notes Location"
         segmentedControl.selectedSegmentIndex = 1
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization() // Modificar infoplist !!!!!!!!!!! Done
@@ -72,7 +73,9 @@ class MapNoteViewController: UIViewController {
             // Cards
             print("Cards")
             let notesListVC = NewNotesListViewController(notebook: notebook, coreDataStack: coredataStack)
-            show(notesListVC, sender: nil)
+            //show(notesListVC, sender: nil)
+            navigationController?.popViewController(animated: true)
+            //self.present(notesListVC, animated: true)
 
         case 1:
             // Map
