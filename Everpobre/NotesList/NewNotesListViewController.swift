@@ -8,12 +8,16 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class NewNotesListViewController: UIViewController {
 
 	// MARK: IBOutlet
 	@IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    var mapVC: MKMapView!
+    
 	// MARK: Properties
 
 	let notebook: Notebook
@@ -58,9 +62,35 @@ class NewNotesListViewController: UIViewController {
 		//let exportButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(exportCSV))
 
 		self.navigationItem.rightBarButtonItems = [addButtonItem]
-	}
+        
 
-	// MARK: Helper methods
+        
+       
+	}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        segmentedControl.selectedSegmentIndex = 0
+    }
+
+    @IBAction func segmentedControlTap(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            // Cards
+            print("Cards")
+        case 1:
+            // Map
+            print("Map")
+            let mapViewController = MapNoteViewController(notebook: notebook, coredataStack: coreDataStack)
+            show(mapViewController, sender: nil)
+        default:
+            break
+        }
+    }
+    
+  
+    
+    // MARK: Helper methods
 
 //    @objc private func exportCSV() {
 //

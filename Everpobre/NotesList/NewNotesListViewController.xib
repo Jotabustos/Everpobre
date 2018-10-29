@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewNotesListViewController" customModule="Everpobre" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="VGa-mi-qQF" id="Ww5-HA-Idt"/>
+                <outlet property="segmentedControl" destination="Ixr-Nc-zCY" id="heG-uH-HHm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +35,16 @@
                         <outlet property="delegate" destination="-1" id="gW4-q2-oqF"/>
                     </connections>
                 </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ixr-Nc-zCY" userLabel="Cards, Map">
+                    <rect key="frame" x="137" y="619" width="101" height="29"/>
+                    <segments>
+                        <segment title="Cards"/>
+                        <segment title="Map"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlTap:" destination="-1" eventType="valueChanged" id="6D0-2S-A5X"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -41,6 +52,8 @@
                 <constraint firstItem="VGa-mi-qQF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JHj-Ib-na3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VGa-mi-qQF" secondAttribute="bottom" id="NNn-8c-hTE"/>
                 <constraint firstItem="VGa-mi-qQF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tnh-8d-Xfo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ixr-Nc-zCY" secondAttribute="bottom" constant="20" id="X5l-Bw-IbY"/>
+                <constraint firstItem="Ixr-Nc-zCY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ePW-OU-JO4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

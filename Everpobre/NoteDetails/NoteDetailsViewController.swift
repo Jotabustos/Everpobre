@@ -88,8 +88,7 @@ class NoteDetailsViewController: UIViewController {
 
 		title = kind.title
 		titleTextField.text = kind.note?.title
-		//tagsLabel.text = note.tags?.joined(separator: ",")
-        //tagsTextField.text = kind.note?.tags
+        tagsTextField.text = kind.note?.tags
 		creationDateLabel.text = "Creado: \((kind.note?.creationDate as Date?)?.customStringLabel() ?? "ND")"
 		lastSeenDateLabel.text = "Visto: \((kind.note?.lastSeenDate as Date?)?.customStringLabel() ?? "ND")"
 		descriptionTextView.text = kind.note?.text ?? "Ingrese texto..."
@@ -259,8 +258,8 @@ private extension NoteDetailsViewController.Kind {
 extension NoteDetailsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            latitudeLabel.text = "\(location.coordinate.latitude)"
-            longitudeLabel.text = "\(location.coordinate.longitude)"
+//            latitudeLabel.text = "\(location.coordinate.latitude)"
+//            longitudeLabel.text = "\(location.coordinate.longitude)"
         }
     }
     
