@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapNoteViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class MapNoteViewController: UIViewController {
     
     var notebook: Notebook
     var coredataStack: CoreDataStack
+    let locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 1000
     
     init(notebook: Notebook, coredataStack: CoreDataStack){
         self.notebook = notebook
@@ -28,10 +31,28 @@ class MapNoteViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapNoteView.setRegion(coordinateRegion, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.selectedSegmentIndex = 1
-        // Do any additional setup after loading the view.
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() // Modificar infoplist !!!!!!!!!!! Done
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation()
+            let latitude = locationManager.location?.coordinate.latitude ?? 0.0
+            let longitude = locationManager.location?.coordinate.longitude ?? 0.0
+            let initialLocation = CLLocation(latitude:  latitude, longitude: longitude)
+            centerMapOnLocation(location: initialLocation)
+        }
+        
+        
     }
 
 
@@ -52,6 +73,7 @@ class MapNoteViewController: UIViewController {
             print("Cards")
             let notesListVC = NewNotesListViewController(notebook: notebook, coreDataStack: coredataStack)
             show(notesListVC, sender: nil)
+
         case 1:
             // Map
             print("Map")
@@ -59,5 +81,20 @@ class MapNoteViewController: UIViewController {
         default:
             break
         }
+    }
+}
+
+
+
+extension MapNoteViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            //            latitudeLabel.text = "\(location.coordinate.latitude)"
+            //            longitudeLabel.text = "\(location.coordinate.longitude)"
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("No pude conseguir la ubicacion del usuario: \(error.localizedDescription)")
     }
 }

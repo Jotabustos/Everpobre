@@ -82,7 +82,10 @@ class NewNotesListViewController: UIViewController {
             // Map
             print("Map")
             let mapViewController = MapNoteViewController(notebook: notebook, coredataStack: coreDataStack)
+           
             show(mapViewController, sender: nil)
+            //navigationController?.pushViewController(mapViewController, animated: true)
+            
         default:
             break
         }
