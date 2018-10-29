@@ -11,6 +11,7 @@
 		8431B5C32181BE5600CBD78C /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5BF2181BE5600CBD78C /* Location+CoreDataProperties.swift */; };
 		8431B5C82181C01B00CBD78C /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5C62181C01B00CBD78C /* Note+CoreDataClass.swift */; };
 		8431B5C92181C01B00CBD78C /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431B5C72181C01B00CBD78C /* Note+CoreDataProperties.swift */; };
+		84DE81A2218691C0005523CB /* NoteDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DE81A1218691C0005523CB /* NoteDetailsViewController.xib */; };
 		A14D6E7B21753B55007EEE1F /* UIImage+ReSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */; };
 		A14D6E7C21753B55007EEE1F /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */; };
 		A14D6E7D21753B55007EEE1F /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D6E7A21753B55007EEE1F /* UIImage+RoundCorner.swift */; };
@@ -30,7 +31,6 @@
 		A1C377B1216C02B300F1DB4B /* deprecated_Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C377B0216C02B300F1DB4B /* deprecated_Note.swift */; };
 		A1C377B4216C039800F1DB4B /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C377B3216C039800F1DB4B /* NotesListViewController.swift */; };
 		A1C377B8216C0D8C00F1DB4B /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C377B6216C0D8C00F1DB4B /* NoteDetailsViewController.swift */; };
-		A1C377B9216C0D8C00F1DB4B /* NoteDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C377B7216C0D8C00F1DB4B /* NoteDetailsViewController.xib */; };
 		A1C55826216FFE57008C8562 /* NewNotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C55824216FFE57008C8562 /* NewNotesListViewController.swift */; };
 		A1C55827216FFE57008C8562 /* NewNotesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C55825216FFE57008C8562 /* NewNotesListViewController.xib */; };
 		A1C5582A21700191008C8562 /* NotesListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5582821700191008C8562 /* NotesListCollectionViewCell.swift */; };
@@ -43,6 +43,7 @@
 		8431B5BF2181BE5600CBD78C /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8431B5C62181C01B00CBD78C /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8431B5C72181C01B00CBD78C /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84DE81A1218691C0005523CB /* NoteDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteDetailsViewController.xib; sourceTree = "<group>"; };
 		A14D6E6D21751AE0007EEE1F /* Everpobre v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Everpobre v2.xcdatamodel"; sourceTree = "<group>"; };
 		A14D6E7821753B55007EEE1F /* UIImage+ReSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ReSize.swift"; sourceTree = "<group>"; };
 		A14D6E7921753B55007EEE1F /* UIImage+Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		A1C377B0216C02B300F1DB4B /* deprecated_Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deprecated_Note.swift; sourceTree = "<group>"; };
 		A1C377B3216C039800F1DB4B /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		A1C377B6216C0D8C00F1DB4B /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
-		A1C377B7216C0D8C00F1DB4B /* NoteDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteDetailsViewController.xib; sourceTree = "<group>"; };
 		A1C55824216FFE57008C8562 /* NewNotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotesListViewController.swift; sourceTree = "<group>"; };
 		A1C55825216FFE57008C8562 /* NewNotesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewNotesListViewController.xib; sourceTree = "<group>"; };
 		A1C5582821700191008C8562 /* NotesListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C377B6216C0D8C00F1DB4B /* NoteDetailsViewController.swift */,
-				A1C377B7216C0D8C00F1DB4B /* NoteDetailsViewController.xib */,
+				84DE81A1218691C0005523CB /* NoteDetailsViewController.xib */,
 			);
 			path = NoteDetails;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C377A1216BEF3000F1DB4B /* LaunchScreen.storyboard in Resources */,
-				A1C377B9216C0D8C00F1DB4B /* NoteDetailsViewController.xib in Resources */,
+				84DE81A2218691C0005523CB /* NoteDetailsViewController.xib in Resources */,
 				A1C5582B21700191008C8562 /* NotesListCollectionViewCell.xib in Resources */,
 				A1C3779E216BEF3000F1DB4B /* Assets.xcassets in Resources */,
 				A1C3779C216BEF2F00F1DB4B /* Main.storyboard in Resources */,

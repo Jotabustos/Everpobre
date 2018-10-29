@@ -89,12 +89,12 @@ class NoteDetailsViewController: UIViewController {
 		title = kind.title
 		titleTextField.text = kind.note?.title
 		//tagsLabel.text = note.tags?.joined(separator: ",")
-        tagsTextField.text = kind.note?.tags
+        //tagsTextField.text = kind.note?.tags
 		creationDateLabel.text = "Creado: \((kind.note?.creationDate as Date?)?.customStringLabel() ?? "ND")"
 		lastSeenDateLabel.text = "Visto: \((kind.note?.lastSeenDate as Date?)?.customStringLabel() ?? "ND")"
 		descriptionTextView.text = kind.note?.text ?? "Ingrese texto..."
-        latitudeLabel.text = "\((kind.note?.location?.latitude) ?? 0.0)"
-        longitudeLabel.text = "\((kind.note?.location?.longitude) ?? 0.0)"
+//        latitudeLabel.text = "\((kind.note?.location?.latitude) ?? 0.0)"
+//        longitudeLabel.text = "\((kind.note?.location?.longitude) ?? 0.0)"
 
 		guard let data = kind.note?.image as Data? else {
 			imageView.image = #imageLiteral(resourceName: "120x180.png")
