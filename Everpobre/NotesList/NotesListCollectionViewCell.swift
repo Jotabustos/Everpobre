@@ -16,7 +16,8 @@ class NotesListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
 
-	var item: Note!
+    @IBOutlet weak var imageCell: UIImageView!
+    var item: Note!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -24,6 +25,7 @@ class NotesListCollectionViewCell: UICollectionViewCell {
 
 	func configure(with item: Note) {
 		backgroundColor = .white
+        imageCell.image = UIImage(data: item.image! as Data)
 		titleLabel.text = item.title
 		creationDateLabel.text = (item.creationDate as Date?)?.customStringLabel()
         latitudeLabel.text = "\((item.location?.latitude) ?? 0.0)"
