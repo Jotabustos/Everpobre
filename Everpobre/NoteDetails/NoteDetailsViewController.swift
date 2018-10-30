@@ -257,10 +257,7 @@ private extension NoteDetailsViewController.Kind {
 
 extension NoteDetailsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-//            latitudeLabel.text = "\(location.coordinate.latitude)"
-//            longitudeLabel.text = "\(location.coordinate.longitude)"
-        }
+        print("Location Updated")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

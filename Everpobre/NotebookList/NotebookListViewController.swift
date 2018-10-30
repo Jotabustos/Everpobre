@@ -20,6 +20,7 @@ class NotebookListViewController: UIViewController {
 
 //	var managedContext: NSManagedObjectContext! // Beware to have a value before presenting the VC
 	var coredataStack: CoreDataStack!
+    var textExported: String = ""
 
 //	var model: [deprecated_Notebook] = [] {
 //		didSet {
@@ -165,6 +166,128 @@ class NotebookListViewController: UIViewController {
 
 		present(alert, animated: true)
 	}
+    
+//    @IBAction func exportData(_ sender: Any) {
+//
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Notebook")
+//        //request.returnsObjectsAsFaults = false
+//        do {
+//            // Fetch the List of Notebooks
+//            let result = try coredataStack.managedContext.fetch(request)
+//            for data in result as! [NSManagedObject] {
+//
+//                //fetchNotesFromNotebook(notebook: data)
+//                let requestNote = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+//                //Set predicate
+//                let predicate = NSPredicate(format: "notebook == %@", data)
+//                requestNote.predicate = predicate
+//                do {
+//                    // Fetch the List of Notes of the Notebook
+//                    let result = try coredataStack.managedContext.fetch(requestNote)
+//                    for data in result as! [NSManagedObject] {
+//                        print(data.value(forKey: "title") as! String)
+//                        let requestLocation = NSFetchRequest<NSFetchRequestResult>(entityName: "Location")
+//                        //Set predicate
+//                        let predicate = NSPredicate(format: "note == %@", data)
+//                        requestLocation.predicate = predicate
+//
+//                        do {
+//                            // Fetch the Location of the Note
+//                            let result = try coredataStack.managedContext.fetch(requestLocation)
+//                            for data in result as! [NSManagedObject] {
+//                                print(data.value(forKey: "latitude") as! Double)
+//                            }
+//                        } catch {
+//
+//                            print("Failed")
+//                        }
+//                    }
+//
+//                } catch {
+//
+//                    print("Failed")
+//                }
+//            }
+//            // Request Note of Notebook
+//
+//        } catch {
+//
+//            print("Failed")
+//        }
+//
+//
+//    }
+    
+    
+    @IBAction func exportData(_ sender: Any) {
+        self.textExported = ""
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Notebook")
+        //request.returnsObjectsAsFaults = false
+        do {
+            // Fetch the List of Notebooks
+            let result = try coredataStack.managedContext.fetch(request)
+            for data in result as! [NSManagedObject] {
+                textExported += "\nNotebook: \(data.value(forKey: "name") ?? "Unknown") Created at \(data.value(forKey: "creationDate") ?? "Unknown")"
+                fetchNotesFromNotebook(notebook: data)
+            }
+        // Request Note of Notebook
+            
+        } catch {
+            print("Failed")
+        }
+        
+        print(textExported)
+        let activityViewController = UIActivityViewController(activityItems: [textExported], applicationActivities: nil)
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+            popoverPresentationController.barButtonItem = (sender as! UIBarButtonItem)
+        }
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func fetchNotesFromNotebook(notebook: NSManagedObject) {
+        let requestNote = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        //Set predicate
+        let predicate = NSPredicate(format: "notebook == %@", notebook)
+        requestNote.predicate = predicate
+        do {
+            // Fetch the List of Notes of the Notebook
+            let result = try coredataStack.managedContext.fetch(requestNote)
+            for data in result as! [NSManagedObject] {
+                textExported += "\nNote: \(data.value(forKey: "title") ?? "Unknown"), Created at \(data.value(forKey: "creationDate") ?? "Unknown"), Tags \(data.value(forKey: "tags") ?? ""), Text \(data.value(forKey: "text") ?? "")"
+                fetchLocationFromNote(note: data)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+    }
+        
+    
+    func fetchLocationFromNote(note: NSManagedObject) {
+        let requestLocation = NSFetchRequest<NSFetchRequestResult>(entityName: "Location")
+        //Set predicate
+        let predicate = NSPredicate(format: "note == %@", note)
+        requestLocation.predicate = predicate
+        
+        do {
+            // Fetch the Location of the Note
+            let result = try coredataStack.managedContext.fetch(requestLocation)
+            for data in result as! [NSManagedObject] {
+                textExported += "\nLocation of Note: \(data.value(forKey: "latitude") ?? "0") \(data.value(forKey: "longitude") ?? "0")"
+                
+            }
+        } catch {
+            
+            print("Failed")
+        }
+    }
+    
+    
+    
+    
+    
+    
 }
 
 // MARK:- UITableViewDataSource implementation
@@ -353,3 +476,6 @@ extension NotebookListViewController: NSFetchedResultsControllerDelegate {
 		tableView.endUpdates()
 	}
 }
+
+
+
